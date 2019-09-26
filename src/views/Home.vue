@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="bg-light p-5"  style="height:500px;">
-      <form action="" class=" h-100">
-        <div class="form-group h-100">
-          
-          <textarea class="form-control h-100" id="insertText"></textarea>
+    <div class="bg-light p-4">
+      <form action="" class=" h-100 text-center">
+        <div class="form-group">
+          <textarea class="form-control" id="insertText" style="height:40vh" placeholder="Enter text for speed reading here..."></textarea>
         </div>
+        <button class="btn btn-success btn-lg"> Speed read</button>
       </form>
      
     </div>
