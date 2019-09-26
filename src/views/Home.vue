@@ -5,7 +5,7 @@
         <div class="form-group">
           <textarea class="form-control" id="insertText" style="height:40vh" placeholder="Enter text for speed reading here..."></textarea>
         </div>
-        <button class="btn btn-success btn-lg"> Speed read</button>
+        <button class="btn btn-success btn-lg" @click.prevent="startSpeedRead"> Speed read</button>
       </form>
      
     </div>
@@ -24,6 +24,12 @@ export default {
   name: 'home',
   components: {
     HelloWorld
+  },
+  methods:{
+    startSpeedRead(){
+      // save text to store and redirect to speed reading view
+      this.$router.push('about');
+    }
   }
 }
 </script>
