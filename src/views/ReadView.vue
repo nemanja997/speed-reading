@@ -12,8 +12,14 @@
         name: "Read",
         data(){
             return{
-                chunk:''
+                chunk: '',
+                splitedText: [],
+                intervalId: {}
             }
+        },
+        mounted(){
+            this.splitedText = this.text.split(" ");
+            this.startReading();
         },
         computed:{
         ...mapState({
@@ -22,7 +28,14 @@
         },
         methods:{
             startReading(){
-
+                this.intervalId = setInterval(()=> {
+                    if( this.splitedText.length > 0 ){
+                        this.chunk = this.splitedText.shift();
+                    }else{
+                        this.chunk = '';
+                        clearInterval(this.intervalId);
+                    }
+                }, 500);
             }
         }
     }
