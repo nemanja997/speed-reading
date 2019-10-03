@@ -5,10 +5,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-
+    text:''
   },
   mutations: {
-
+    addText(state,text){
+      state.text = text;
+    }
   },
   actions: {
 
