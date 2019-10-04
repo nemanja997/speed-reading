@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="bg-light p-4 read-container">
+        <div class="p-4 read-container">
             <span class="read-text" v-text="chunk">Text asdasdasd asdasdasdas</span>
         </div>
     </div>
@@ -49,9 +49,11 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        background-color:#e1e1e1;
+
     }
     .read-text{
         color:black;
-        font-size:2.5em;
+        font-size:40px;
     }
 </style>
