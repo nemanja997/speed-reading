@@ -1,0 +1,20 @@
+//Add transition for everything when changing background-color
+body, body *{
+  transition:background-color 1s;
+}
+
+//dark-mode class will be attached to body
+.dark-mode{
+  background-color:#1C2532;
+  .settings-container{
+    background-color:#283243;
+  }
+  #insertTextArea{
+    background-color: #323E4F;
+    color: $text-light;
+  }
+  .page-heading{
+    color: $text-light;
+  }
+
+}
