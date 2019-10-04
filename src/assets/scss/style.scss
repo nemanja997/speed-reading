@@ -1,0 +1,24 @@
+//COLORS
+
+$text-light:#d5d5d5;
+$text-dark: #1e2329;
+
+body, body *{
+  transition:background 1s;
+}
+
+
+.dark-mode{
+  background-color:#1C2532;
+  .settings-container{
+    background-color:#283243;
+  }
+  #insertTextArea{
+    background-color: #323E4F;
+    color: $text-light;
+  }
+  .page-heading{
+    color: $text-light;
+  }
+
+}
