@@ -1,12 +1,22 @@
 <template>
-  <div id="app" class="container">
-    <div class="text-center my-4">
-      <h1>Speed reader</h1>
-    </div>
-    <router-view/>
+  <div id="app">
+
+    <app-base-view></app-base-view>
+
   </div>
 </template>
 
+<script>
+  import AppBaseView from './views/AppBaseView';
+  export default{
+      name:'app',
+      components:{
+          AppBaseView
+      }
+  }
+</script>
+
 <style lang="scss">
+  /*@import "./assets/scss/style.scss";*/
 
 </style>
