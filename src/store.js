@@ -6,7 +6,9 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     text:'',
-    settings:{}
+    settings:{
+        wordsPerMinute:200
+    }
   },
   mutations: {
     addText(state,text){

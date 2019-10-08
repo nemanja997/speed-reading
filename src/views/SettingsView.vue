@@ -44,7 +44,7 @@ export default {
         text:'',
         fontSize:40,
         chunks:1,
-        wpm:200
+        wordsPerMinute:200
     }
   },
     methods:{

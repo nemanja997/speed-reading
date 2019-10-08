@@ -27,7 +27,11 @@
         computed:{
         ...mapState({
             text: state => state.text,
-            })
+            settings: state => state.settings,
+            }),
+            flashPause(){
+            return 60 / this.settings.wordsPerMinute * 1000;
+            }
         },
         methods:{
             startReading(){
@@ -38,7 +42,7 @@
                         this.chunk = '';
                         clearInterval(this.intervalId);
                     }
-                }, 500);
+                }, this.flashPause);
             }
         }
     }
