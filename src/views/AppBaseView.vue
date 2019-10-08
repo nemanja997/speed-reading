@@ -9,7 +9,8 @@
                            :width="70"
                            :height="27"
                            color="#3e4f69"
-                           :font-size="14"/>
+                           :font-size="14"
+                           :speed="500"/>
         </div>
 
         <router-view/>

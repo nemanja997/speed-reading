@@ -1,7 +1,10 @@
 //COLORS
 
-$text-light:#d5d5d5;
+$text-light: #d5d5d5;
 $text-dark: #1e2329;
+
+$background-dark: #1C2532;
+$background-dark-light: lighten($background-dark,5%);
 
 
 @import './dark-mode.scss';

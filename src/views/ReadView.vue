@@ -3,6 +3,9 @@
         <div class="p-4 read-container">
             <span class="read-text" v-text="chunk">Text asdasdasd asdasdasdas</span>
         </div>
+        <div class="controls-container">
+
+        </div>
     </div>
 </template>
 
@@ -50,10 +53,14 @@
         justify-content: center;
         flex-direction: column;
         background-color:#e1e1e1;
+        border-radius: 0.25rem;
 
     }
     .read-text{
         color:black;
         font-size:40px;
+    }
+    .controls-container{
+
     }
 </style>

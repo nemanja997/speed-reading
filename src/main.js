@@ -6,6 +6,7 @@ import ToggleButton from 'vue-js-toggle-button'
 
 import 'bootstrap'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.css';
 
 Vue.config.productionTip = false;
 Vue.config.devtools = true;
