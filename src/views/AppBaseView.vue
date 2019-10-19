@@ -1,26 +1,29 @@
 <template>
-    <div class="container">
-        <div class="text-center my-4">
-            <h1 class="page-heading">Speed reader</h1>
-        </div>
-        <div class="fixed-switch-container">
-            <toggle-button v-model="darkMode" @change="changeTheme"
-                           :labels="{checked: 'Dark', unchecked: 'Light'}"
-                           :width="70"
-                           :height="27"
-                           color="#3e4f69"
-                           :font-size="14"
-                           :speed="500"/>
-        </div>
+    <div id="page-wrapper">
+        <main-navbar></main-navbar>
+        <div class="container">
+            <div class="fixed-switch-container">
+                <!--<toggle-button v-model="darkMode" @change="changeTheme"-->
+                               <!--:labels="{checked: 'Dark', unchecked: 'Light'}"-->
+                               <!--:width="70"-->
+                               <!--:height="27"-->
+                               <!--color="#3e4f69"-->
+                               <!--:font-size="14"/>-->
+            </div>
 
-        <router-view/>
+            <router-view/>
 
+        </div>
     </div>
 </template>
 
 <script>
+    import MainNavbar from '../components/MainNavbar';
     export default {
         name: "AppBaseView",
+        components:{
+            MainNavbar
+        },
         data() {
             return {
                 darkMode: false
@@ -43,8 +46,5 @@
         position: fixed;
         left: 20px;
         top: 20px;
-    }
-    .page-heading{
-        color: $text-dark;
     }
 </style>

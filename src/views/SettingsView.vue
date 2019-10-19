@@ -7,7 +7,7 @@
         </div>
           <div class="row">
             <div class="col-3 text-left">
-              <button class="btn btn-primary" @click.prevent="$refs.settingsModal.open()">
+              <button class="btn btn-primary btn-shadow" @click.prevent="$refs.settingsModal.open()">
                 <i class="fa fa-cog fa-2x" aria-hidden="true"></i>
               </button>
             </div>
@@ -16,7 +16,7 @@
             <div class="col-3">
             </div>
             <div class="col-3">
-              <button @click.prevent="start" class="btn btn-block btn-success btn-lg"> Speed read</button>
+              <button @click.prevent="start" class="btn btn-block btn-primary btn-shadow btn-lg"> Speed read</button>
             </div>
           </div>
 
@@ -62,9 +62,15 @@ export default {
     resize:none;
     height:40vh;
     border-width: 0px;
+      border-color: #e4e6f2;
+      border-width: 2px;
+      border-style:dashed;
   }
   .settings-container{
-    background-color:#e1e1e1;
+      margin-top:5vh;
     border-radius: 0.25rem;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 20px rgba(43,45,56,.1);
   }
 </style>

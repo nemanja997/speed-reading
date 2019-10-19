@@ -1,5 +1,15 @@
 //COLORS
 
+//override bootstrap collors
+$primary:       #46af71;
+
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+
+body, body *{
+  //transition:background-color 1s !important;
+  font-family: 'Lato', sans-serif;
+}
 $text-light: #d5d5d5;
 $text-dark: #1e2329;
 
@@ -8,3 +18,7 @@ $background-dark-light: lighten($background-dark,5%);
 
 
 @import './dark-mode.scss';
+
+.btn-shadow{
+  box-shadow: 0 14px 28px 0 rgba(13,31,61,.14);
+}

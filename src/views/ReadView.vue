@@ -56,9 +56,11 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        background-color:#e1e1e1;
+        margin-top:5vh;
         border-radius: 0.25rem;
-
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 20px rgba(43,45,56,.1);
     }
     .read-text{
         color:black;
