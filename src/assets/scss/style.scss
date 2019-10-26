@@ -3,9 +3,14 @@
 //override bootstrap collors
 $primary:       #46af71;
 
+
+
+
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
-
+.form-control:focus{
+  box-shadow:none;
+}
 body, body *{
   font-family: 'Lato', sans-serif;
 }

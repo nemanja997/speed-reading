@@ -4,7 +4,12 @@
             <span class="read-text" v-text="chunk">Text asdasdasd asdasdasdas</span>
         </div>
         <div class="p-4 read-controls-container text-center">
-            <vue-slider v-model="value" />
+            <vue-slider
+                    v-model="sliderPosition"
+                    :min="0"
+                    :max="sliderLength"
+                    :interval="1"
+            />
             <button @click="togglePause" class="btn btn-outline-primary">
                 <i class="fa fa-play" v-bind:class= "[isPaused ? 'fa-play' : 'fa-pause']" aria-hidden="true"></i>
             </button>
@@ -27,11 +32,14 @@
                 chunk: '',
                 splitedText: [],
                 intervalId: {},
-                isPaused: false
+                isPaused: false,
+                sliderPosition:0,
+                sliderLength:0
             }
         },
         mounted(){
             this.splitedText = this.text.split(" ");
+            this.sliderLength = this.splitedText.length;
             this.startReading();
         },
         computed:{
@@ -47,8 +55,9 @@
             startReading(){
                 this.intervalId = setInterval(()=> {
                     if(!this.isPaused){
-                        if( this.splitedText.length > 0 ){
-                            this.chunk = this.splitedText.shift();
+                        if( this.splitedText.length > this.sliderPosition ){
+                            this.chunk = this.splitedText[this.sliderPosition];
+                            this.sliderPosition+= 1;
                         }else{
                             this.chunk = '';
                             clearInterval(this.intervalId);

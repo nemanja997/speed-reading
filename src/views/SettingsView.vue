@@ -45,8 +45,10 @@ export default {
   },
     methods:{
         start(){
-          this.$store.commit('addText',this.text);
-          this.$router.push('/read');
+            if(this.text !== ''){
+                this.$store.commit('addText',this.text);
+                this.$router.push('/read');
+            }
         }
     }
 
