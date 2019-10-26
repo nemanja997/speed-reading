@@ -18,7 +18,7 @@
 </template>
 
 <script>
-    import MainNavbar from '../components/MainNavbar';
+    import MainNavbar from '../components/TheMainNavbar';
     export default {
         name: "AppBaseView",
         components:{
