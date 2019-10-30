@@ -4,8 +4,8 @@ App for improving reading speed by eliminating "eye scatter", one of the main fa
 **Work in progress...**
 
 Planned features:
-- Speed reading custom text
-- Speed reading news articles from the web
+- Practise speed reading custom text
+- Practise speed reading news articles from the web
 - Configuring font, size and color of the text
 - Dark color mode.
 
