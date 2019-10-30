@@ -1,4 +1,4 @@
-# speed-reading
+# Speed reading app
 App for improving reading speed by eliminating "eye scatter", one of the main factors that limits our reading speed.
 
 **Work in progress...**
