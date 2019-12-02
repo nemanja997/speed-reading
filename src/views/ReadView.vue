@@ -33,6 +33,7 @@
                 splitedText: [],
                 intervalId: {},
                 isPaused: false,
+                isFinished: false,
                 sliderPosition:0,
                 sliderLength:0
             }
