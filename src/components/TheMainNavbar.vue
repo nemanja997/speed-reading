@@ -7,9 +7,9 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav m-auto">
-                <li class="nav-item active">
+                <router-link tag="li" to="/" class="nav-item" active-class="active" exact>
                     <a class="nav-link" href="#">Custom text</a>
-                </li>
+                </router-link>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Read news</a>
                 </li>

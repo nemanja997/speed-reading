@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import SettingsView from './views/SettingsView.vue'
 import ReadView from './views/ReadView.vue'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   mode: 'history',
