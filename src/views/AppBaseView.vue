@@ -2,14 +2,6 @@
     <div id="page-wrapper">
         <main-navbar></main-navbar>
         <div class="container">
-            <div class="fixed-switch-container">
-                <!--<toggle-button v-model="darkMode" @change="changeTheme"-->
-                               <!--:labels="{checked: 'Dark', unchecked: 'Light'}"-->
-                               <!--:width="70"-->
-                               <!--:height="27"-->
-                               <!--color="#3e4f69"-->
-                               <!--:font-size="14"/>-->
-            </div>
 
             <router-view/>
 

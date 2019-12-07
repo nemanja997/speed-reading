@@ -16,6 +16,6 @@
   }
 </script>
 
-<style lang="scss">
-  @import "../node_modules/bootstrap/scss/bootstrap";
+<style lang="scss"  rel="stylesheet/scss">
+  @import "./assets/scss/style";
 </style>

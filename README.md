@@ -16,6 +16,7 @@ Planned features:
 
 Live demo : https://speedreading.netlify.com/
 
+Hosted With Netlify with continius deployment.
 ## Project setup
 ```
 npm install
