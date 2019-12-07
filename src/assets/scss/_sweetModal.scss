@@ -1,0 +1,10 @@
+//override sweet modal styles
+
+.sweet-modal .sweet-title > h2{
+  line-height: 64px;
+}
+
+.sweet-modal .sweet-box-actions .sweet-action-close:hover {
+  background: lighten($info, 30%) !important;
+  color: #fff;
+}

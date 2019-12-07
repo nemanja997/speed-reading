@@ -1,12 +1,15 @@
 //COLORS
 
 //override bootstrap collors
-$primary:       #46af71;
+$primary: #46af71;
+$info: #7e3996;
 
 
-
-
+//import bootstrap
 @import "../../../node_modules/bootstrap/scss/bootstrap";
+
+//import sweet modal overrides
+@import "./sweetModal";
 
 .form-control:focus{
   box-shadow:none;
@@ -35,7 +38,7 @@ nav li::after  {
   display: block;
   width: 0;
   height: 2px;
-  background: $primary;
+  background: $info;
   transition: width .3s;
 }
 
@@ -46,10 +49,11 @@ nav .active::after {
   display: block;
   width: 100%;
   height: 2px;
-  background: $primary;
+  background: $info;
   transition: width .3s;
 }
 //nav .active:hover::after {
 //  width: 100%;
 //  //transition: width .3s;
 //}
+
