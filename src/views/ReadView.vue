@@ -35,11 +35,21 @@
                 isPaused: false,
                 isFinished: false,
                 sliderPosition:0,
-                sliderLength:0
+                sliderLength:0,
+                texttt:''
             }
         },
         mounted(){
-            this.splitedText = this.text.split(" ");
+            this.texttt=  this.text;
+            this.splitedText = this.texttt.split(" ");
+            this.splitedText = this.splitedText.reduce((result,value,index)=>{
+                if(index % this.settings.chunks === 0){
+                    result.push([value]);
+                }else{
+                    result[result.length-1].push(value);
+                }
+                return result;
+            },[]);
             this.sliderLength = this.splitedText.length;
             this.startReading();
         },
@@ -57,7 +67,7 @@
                 this.intervalId = setInterval(()=> {
                     if(!this.isPaused){
                         if( this.splitedText.length > this.sliderPosition ){
-                            this.chunk = this.splitedText[this.sliderPosition];
+                            this.chunk = this.splitedText[this.sliderPosition].join(" ");
                             this.sliderPosition+= 1;
                         }else{
                             this.chunk = '';

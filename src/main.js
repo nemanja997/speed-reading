@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 import ToggleButton from 'vue-js-toggle-button'
 
-// import 'bootstrap';
+import 'bootstrap';
 import 'font-awesome/css/font-awesome.css';
 
 Vue.config.productionTip = false;

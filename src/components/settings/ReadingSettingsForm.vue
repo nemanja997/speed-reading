@@ -1,9 +1,12 @@
 
 <template>
     <div>
-        <div class="preview-settings text-center py-5" :style="{ 'font-size': fontSize + 'px', 'font-family': fontFamily }">
-            {{previewTextChunks}}
+        <div style="padding-bottom:24px;">
+            <div class="preview-settings text-center" :style="{ 'font-size': fontSize + 'px', 'font-family': fontFamily }">
+                {{previewTextChunks}}
+            </div>
         </div>
+
         <form @submit.prevent="saveSettings">
             <div class="form-row">
                 <div class="form-group col">
@@ -29,7 +32,7 @@
                 </div>
                 <div class="form-group col">
                     <select id="fontSzie" class="form-control" v-model="fontSize">
-                        <option v-for="number in [16,24,32,40]" :value="number">{{number}}</option>
+                        <option v-for="number in [16,24,32,40,50]" :value="number">{{number}}</option>
                     </select>
                 </div>
             </div>
@@ -43,7 +46,9 @@
                     </select>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary pull-right">Save</button>
+            <div class="text-center">
+                <button type="submit" class="btn btn-info btn-shadow px-5 pull-right">Save</button>
+            </div>
         </form>
     </div>
 
@@ -86,7 +91,7 @@
 
 <style>
     .preview-settings{
-        min-height:200px;
+        min-height:180px;
         text-align:center;
         display: flex;
         align-items: center;
