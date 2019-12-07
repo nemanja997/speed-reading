@@ -1,7 +1,7 @@
 <template>
     <div class="read-container">
         <div class="p-4 read-text-container">
-            <span class="read-text" v-text="chunk">Text asdasdasd asdasdasdas</span>
+            <span class="read-text" v-text="chunk"></span>
         </div>
         <div class="p-4 read-controls-container text-center">
             <vue-slider

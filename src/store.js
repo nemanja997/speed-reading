@@ -5,13 +5,17 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    text:'',
+    readingText:'',
     settings:{
-        wordsPerMinute:200
+        wordsPerMinute:200,
+        chunks:1,
+        fontSize:16,
+        color:'black',
+        fontFamily:'Arial',
     }
   },
   mutations: {
-    addText(state,text){
+    addReadingText(state,text){
       state.text = text;
     },
     addSettings(state,settings){

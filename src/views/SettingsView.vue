@@ -20,7 +20,7 @@
       <sweet-modal ref="settingsModal"
                    title="Settings for reeading"
                    modal-theme="light">
-        This is an alert.
+        <reading-settings-form @settingsSaved="closeModal"></reading-settings-form>
       </sweet-modal>
      
     </div>
@@ -29,26 +29,28 @@
 
 <script>
     import { SweetModal } from 'sweet-modal-vue';
+    import ReadingSettingsForm from '../components/reading/ReadingSettingsForm'
 
 export default {
   name: 'home',
     components: {
-        SweetModal
+        SweetModal,
+        ReadingSettingsForm
     },
     data(){
     return{
         text:'',
-        fontSize:40,
-        chunks:1,
-        wordsPerMinute:200
     }
   },
     methods:{
         start(){
             if(this.text !== ''){
-                this.$store.commit('addText',this.text);
+                this.$store.commit('addReadingText',this.text);
                 this.$router.push('/read');
             }
+        },
+        closeModal(){
+            this.$refs.settingsModal.close();
         }
     }
 
@@ -56,6 +58,9 @@ export default {
 </script>
 
 <style lang="scss">
+  .sweet-modal .sweet-title > h2{
+    line-height: 64px;
+  }
   #insertTextArea {
     resize:none;
     height:40vh;
