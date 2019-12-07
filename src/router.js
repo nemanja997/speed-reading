@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import SettingsView from './views/SettingsView.vue'
 import ReadView from './views/ReadView.vue'
+import NewsView from './views/NewsView.vue'
 
 Vue.use(Router);
 
@@ -18,6 +19,11 @@ export default new Router({
         path: '/read',
         name: 'read',
         component: ReadView
-    }
+    },
+      {
+          path: '/news',
+          name: 'news',
+          component: NewsView
+      }
   ]
 })
