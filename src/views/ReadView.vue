@@ -10,9 +10,15 @@
                     :max="sliderLength"
                     :interval="1"
             />
-            <button @click="togglePause" class="btn btn-outline-primary">
+            <button @click="togglePause" class="btn btn-outline-primary mr-3">
+                <i class="fa fa-fast-backward" aria-hidden="true"></i>
+            </button>
+            <button @click="togglePause" class="btn" v-bind:class= "[isPaused ? 'btn-primary' : 'btn-outline-primary']">
                 <i class="fa fa-play" v-bind:class= "[isPaused ? 'fa-play' : 'fa-pause']" aria-hidden="true"></i>
             </button>
+            <router-link to="/" tag="button" @click="togglePause" class="btn pull-right btn-outline-info">
+                New text
+            </router-link>
         </div>
     </div>
 </template>
@@ -32,7 +38,7 @@
                 chunk: '',
                 splitedText: [],
                 intervalId: {},
-                isPaused: false,
+                isPaused: true,
                 isFinished: false,
                 sliderPosition:0,
                 sliderLength:0,
