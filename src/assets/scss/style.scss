@@ -52,8 +52,12 @@ nav .active::after {
   background: $info;
   transition: width .3s;
 }
-//nav .active:hover::after {
-//  width: 100%;
-//  //transition: width .3s;
-//}
 
+.btn:not(:disabled):not(.disabled):active:focus{
+  outline:none;
+  box-shadow: none;
+}
+.btn:focus, .btn:active:focus{
+  outline:none;
+  box-shadow: none;
+}
