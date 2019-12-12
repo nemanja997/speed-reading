@@ -10,7 +10,7 @@
                     :max="sliderLength"
                     :interval="1"
             />
-            <button @click="togglePause" class="btn btn-outline-primary mr-3">
+            <button @click="backToStart" class="btn btn-outline-primary mr-3">
                 <i class="fa fa-fast-backward" aria-hidden="true"></i>
             </button>
             <button @click="togglePause" class="btn" v-bind:class= "[isPaused ? 'btn-primary' : 'btn-outline-primary']">
@@ -79,6 +79,9 @@
                     result[result.length-1].push(value);
                 }
                 return result;
+            },
+            backToStart(){
+                this.sliderPosition = 0;
             }
         }
     }
