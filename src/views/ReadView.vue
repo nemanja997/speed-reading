@@ -41,21 +41,11 @@
                 isPaused: true,
                 isFinished: false,
                 sliderPosition:0,
-                sliderLength:0,
-                texttt:''
+                sliderLength:0
             }
         },
         mounted(){
-            this.texttt=  this.text;
-            this.splitedText = this.texttt.split(" ");
-            this.splitedText = this.splitedText.reduce((result,value,index)=>{
-                if(index % this.settings.chunks === 0){
-                    result.push([value]);
-                }else{
-                    result[result.length-1].push(value);
-                }
-                return result;
-            },[]);
+            this.splitedText = this.text.split(" ").reduce(this.splitText,[]);
             this.sliderLength = this.splitedText.length;
             this.startReading();
         },
@@ -75,16 +65,20 @@
                         if( this.splitedText.length > this.sliderPosition ){
                             this.chunk = this.splitedText[this.sliderPosition].join(" ");
                             this.sliderPosition+= 1;
-                        }else{
-                            this.chunk = '';
-                            clearInterval(this.intervalId);
                         }
                     }
-
                 }, this.flashPause);
             },
             togglePause(){
                 this.isPaused = !this.isPaused;
+            },
+            splitText(result,value,index){
+                if(index % this.settings.chunks === 0){
+                    result.push([value]);
+                }else{
+                    result[result.length-1].push(value);
+                }
+                return result;
             }
         }
     }
