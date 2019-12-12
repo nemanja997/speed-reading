@@ -15,7 +15,8 @@
                     </button>
                 </div>
                 <div class="col">
-                    <button @click.prevent="start" class="btn btn-block btn-primary btn-shadow btn-lg"> Speed read
+                    <button @click.prevent="start" class="btn btn-block btn-primary btn-shadow btn-lg">
+                        Speed read &nbsp; &nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
