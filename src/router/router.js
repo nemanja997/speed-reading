@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import SettingsView from './views/SettingsView.vue'
-import ReadView from './views/ReadView.vue'
-import NewsView from './views/NewsView.vue'
+import SettingsView from '../views/SettingsView.vue'
+import ReadView from '../views/ReadView.vue'
+import NewsView from '../views/NewsView.vue'
 
 Vue.use(Router);
 
@@ -13,17 +13,20 @@ export default new Router({
     {
       path: '/',
       name: 'settings',
-      component: SettingsView
+      component: SettingsView,
+      meta: { title: 'Settings' }
     },
     {
         path: '/read',
         name: 'read',
-        component: ReadView
+        component: ReadView,
+        meta: { title: 'Read' }
     },
       {
           path: '/news',
           name: 'news',
-          component: NewsView
+          component: NewsView,
+          meta: { title: 'News' }
       }
   ]
 })
