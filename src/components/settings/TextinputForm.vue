@@ -55,7 +55,7 @@
             start() {
                 if (this.text !== '') {
                     this.$store.commit('addReadingText', this.text);
-                    this.$router.push('/read');
+                    this.$router.push('/custom-text/read');
                 }
             },
             closeModal() {

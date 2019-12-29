@@ -21,7 +21,7 @@
   .settings-container{
       margin-top:5vh;
       background: #fff;
-      border-radius: 0.25rem;
+      border-radius: 8px;
       box-shadow: 0 0 20px rgba(43,45,56,.1);
   }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div id="page-wrapper">
         <main-navbar></main-navbar>
-        <div class="container">
+        <div class="container-fluid">
             <transition name="fade" mode="out-in">
                 <router-view></router-view>
             </transition>

@@ -2,8 +2,13 @@
 //import variables
 @import "./variables";
 
+
+
 //import bootstrap
 @import "../../../node_modules/bootstrap/scss/bootstrap";
+
+//import navbar
+@import "./navbar";
 
 //import sweet modal overrides
 @import "./sweetModal";
@@ -11,8 +16,12 @@
 .form-control:focus{
   box-shadow:none;
 }
-body, body *{
+body, *{
   font-family: 'Lato', sans-serif;
+}
+html, body {
+  background-color:#F5F7FA;
+  color:#32363d;
 }
 $text-light: #d5d5d5;
 $text-dark: #1e2329;
@@ -25,30 +34,7 @@ $background-dark-light: lighten($background-dark,5%);
   box-shadow: 0 14px 28px 0 rgba(13,31,61,.14);
 }
 
-nav li {
-  position:relative;
-}
-nav li::after  {
-  position:absolute;
-  bottom:4px;
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background: $info;
-  transition: width .3s;
-}
 
-nav .active::after {
-  position:absolute;
-  bottom:4px;
-  content: '';
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: $info;
-  transition: width .3s;
-}
 
 .btn:not(:disabled):not(.disabled):active:focus{
   outline:none;

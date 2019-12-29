@@ -12,7 +12,7 @@
             />
             <div class="row mt-2">
                 <div class="col-3">
-                    <router-link to="/" tag="button" @click="togglePause" class="btn pull-left btn-outline-info">
+                    <router-link to="/custom-text/settings" tag="button" @click="togglePause" class="btn pull-left btn-outline-info">
                         <i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp; &nbsp; New text
                     </router-link>
                 </div>
@@ -102,7 +102,7 @@
 <style scoped>
     .read-container {
         margin-top: 5vh;
-        border-radius: 0.25rem;
+        border-radius: 8px;
         background: #fff;
         box-shadow: 0 0 20px rgba(43, 45, 56, .1);
     }
