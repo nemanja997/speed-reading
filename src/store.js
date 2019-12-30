@@ -12,7 +12,8 @@ export default new Vuex.Store({
             fontSize: 16,
             color: 'black',
             fontFamily: 'Arial',
-        }
+        },
+        news:{}
     },
     mutations: {
         addReadingText(state, text) {

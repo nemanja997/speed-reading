@@ -12,16 +12,17 @@ export default new Router({
     base: process.env.BASE_URL,
     routes: [
         {
-            path: '/custom-text',
+            path: '/',
             name: 'custom-text',
             component: CustomTextView,
-            redirect: '/custom-text/settings',
+            redirect: '/settings',
             meta: { title: 'Custom Text' },
             children: [
                 {
                     path: 'settings',
                     name: 'settings',
                     component: SettingsView,
+                    alias: '/',
                     meta: { title: 'Settings' }
                 },
                 {
