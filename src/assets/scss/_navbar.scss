@@ -11,7 +11,7 @@
 nav li{
   position:relative;
 }
-nav li a:after  {
+nav li:after  {
   position:absolute;
   bottom:4px;
   content: '';

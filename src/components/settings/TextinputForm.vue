@@ -8,12 +8,6 @@
           </textarea>
             </div>
             <div class="row">
-                <div class="col-auto text-left">
-                    <button class="btn btn-block btn-info btn-shadow btn-lg px-3"
-                            @click.prevent="$refs.settingsModal.open()">
-                        <i class="fa fa-cog" aria-hidden="true"></i> &nbsp; Settings
-                    </button>
-                </div>
                 <div class="col">
                     <button @click.prevent="start" class="btn btn-block btn-primary btn-shadow btn-lg">
                         Speed read &nbsp; &nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i>
@@ -21,25 +15,16 @@
                 </div>
             </div>
         </form>
-        <sweet-modal ref="settingsModal"
-                     title="Reading settings"
-                     modal-theme="light">
-            <reading-settings-form @settingsSaved="closeModal"></reading-settings-form>
-        </sweet-modal>
+
     </div>
 
 </template>
 
 <script>
-    import {SweetModal} from 'sweet-modal-vue';
-    import ReadingSettingsForm from './ReadingSettingsForm'
+
 
     export default {
         name: "TextinputForm",
-        components: {
-            SweetModal,
-            ReadingSettingsForm
-        },
         data() {
             return {
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed ' +
@@ -55,11 +40,8 @@
             start() {
                 if (this.text !== '') {
                     this.$store.commit('addReadingText', this.text);
-                    this.$router.push('/custom-text/read');
+                    this.$router.push('/read');
                 }
-            },
-            closeModal() {
-                this.$refs.settingsModal.close();
             }
         }
     }
