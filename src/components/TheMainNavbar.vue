@@ -10,17 +10,18 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav m-auto">
-                    <router-link tag="li" to="/" class="nav-item" active-class="active" exact>
-                        <a class="nav-link" href="#">Custom text</a>
-                    </router-link>
-                    <router-link tag="li" to="/news" class="nav-item" active-class="active" exact>
-                        <a class="nav-link" href="#">News</a>
-                    </router-link>
+                    <li class="nav-item">
+                        <router-link to="/" class="nav-link" active-class="active" exact>
+                            Custom text
+                        </router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/news" class="nav-link" active-class="active" exact>
+                            News
+                        </router-link>
+                    </li>
 
                 </ul>
-                <!--<a class="navbar-brand" href="https://github.com/nemanja997/speed-reading"><i class="fa fa-github fa-lg"-->
-                                                                                              <!--aria-hidden="true"></i>-->
-                    <!--Github</a>-->
                 <button class="btn btn-info font-weight-bold px-3"
                         @click.prevent="$refs.settingsModal.open()">
                     <i class="fa fa-cog" aria-hidden="true"></i> &nbsp; Settings
