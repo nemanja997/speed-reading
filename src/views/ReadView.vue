@@ -69,8 +69,8 @@
         },
         computed: {
             ...mapState({
-                text: state => state.text,
-                settings: state => state.settings,
+                text: state => state.readingText,
+                settings: state => state.settings
             }),
             flashPause() {
                 return 60 / this.settings.wordsPerMinute * 1000;

@@ -9,12 +9,12 @@
             <div class="row">
                 <div class="col">
                     <div class="about-section  text-center">
-                        <h2>About Speed Reading</h2>
-                        <p>Speed reading is the process of rapidly recognizing and absorbing phrases or sentences
-                            on a page all at once, rather than identifying individual words.</p>
-                        <p>There are different techniques that you can use to improve your reading speed. All of them
-                            involve skimming a page rather than "sub-vocalizing" each word as you were likely taught at
-                            school.</p>
+                        <!--<h2>About Speed Reading</h2>-->
+                        <!--<p>Speed reading is the process of rapidly recognizing and absorbing phrases or sentences-->
+                            <!--on a page all at once, rather than identifying individual words.</p>-->
+                        <!--<p>There are different techniques that you can use to improve your reading speed. All of them-->
+                            <!--involve skimming a page rather than "sub-vocalizing" each word as you were likely taught at-->
+                            <!--school.</p>-->
                     </div>
                 </div>
             </div>

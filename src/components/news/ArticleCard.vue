@@ -6,9 +6,9 @@
                     <img class="img-fluid" src="../../../public/images/test.jpg" alt="">
                 </div>
                 <h2>{{articleTitle}}</h2>
-                {{articleText}}
-                <div class="mt-2 font-weight-bold ">
-                    <a href="#" v-bind:class="{ active: isHovered }">Speed read &nbsp; &nbsp; <i class="fa fa-arrow-right article-link" aria-hidden="true"></i></a>
+                {{shortText}}
+                <div class="mt-2 font-weight-bold text-right">
+                    <a href="#" v-bind:class="{ active: isHovered }">Speed read  <span class="link-arrow">→</span></a>
                 </div>
             </div>
         </div>
@@ -33,6 +33,11 @@
             },
             onCardHover(){
 
+            }
+        },
+        computed:{
+            shortText(){
+                return this.articleText.split(' ').slice(0,20).join(' ') + '...';
             }
         }
     }

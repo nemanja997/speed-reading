@@ -28,23 +28,24 @@
         name: "TextinputForm",
         data() {
             return {
-                initialText: '',
+                text: '',
             }
         },
-        mounted(){
-            this.initialText = this.text;
+        mounted() {
+
+            this.text = this.readingText;
         },
-        computed:{
+        computed: {
             ...mapState({
-                text: state => state.text
-            }),
+                readingText: state => state.readingText
+            })
         },
         methods: {
             start() {
                 if (this.text !== '') {
                     this.$store.commit('addReadingText', this.text);
                     this.$router.push('/read');
-                }else{
+                } else {
                     this.$refs.customTextForm.reportValidity();
                 }
             }

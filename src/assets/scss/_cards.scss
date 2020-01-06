@@ -14,6 +14,7 @@
     &:after {
       position: absolute;
       bottom: -6px;
+      left:0px;
       content: '';
       display: block;
       width: 0;
@@ -25,6 +26,7 @@
       &:after {
         position: absolute;
         bottom: -6px;
+        left:0px;
         content: '';
         display: block;
         width: 100%;
