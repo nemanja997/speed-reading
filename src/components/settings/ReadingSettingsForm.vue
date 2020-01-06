@@ -13,7 +13,9 @@
                     <label for="wordsPerMinute">Word per minute:</label>
                 </div>
                 <div class="form-group col">
-                        <input required class="form-control" id="wordsPerMinute" type="number" name="quantity" min="100" max="1000" v-model="wordsPerMinute">
+                    <select id="wordsPerMinute" class="form-control" v-model="wordsPerMinute">
+                        <option v-for="number in [200,300,350,400,450,500,550,600]" :value="number">{{number}}</option>
+                    </select>
                 </div>
             </div>
             <div class="form-row">

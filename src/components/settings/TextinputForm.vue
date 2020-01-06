@@ -1,8 +1,9 @@
 <template>
     <div>
-        <form action="" class=" h-100 text-center">
+        <form ref="customTextForm" action="" class=" h-100 text-center">
+            <h2>Enter your text here:</h2>
             <div class="form-group">
-          <textarea v-model="text" class="form-control" id="insertTextArea"
+          <textarea required v-model="text" class="form-control" id="insertTextArea"
                     placeholder="Enter text for speed reading here...">
 
           </textarea>
@@ -41,6 +42,8 @@
                 if (this.text !== '') {
                     this.$store.commit('addReadingText', this.text);
                     this.$router.push('/read');
+                }else{
+                    this.$refs.customTextForm.reportValidity();
                 }
             }
         }

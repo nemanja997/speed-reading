@@ -1,9 +1,11 @@
 <template>
-    <div class="read-container">
-        <div class="p-4 read-text-container">
-            <span class="read-text" v-text="chunk"></span>
+    <div>
+        <div class="read-container">
+            <div class="p-4 read-text-container">
+                <span class="read-text" v-text="chunk"></span>
+            </div>
         </div>
-        <div class="p-4 read-controls-container text-center">
+        <div class="controls-container p-4">
             <vue-slider
                     v-model="sliderPosition"
                     :min="0"
@@ -12,7 +14,8 @@
             />
             <div class="row mt-2">
                 <div class="col-3">
-                    <router-link to="/settings" tag="button" @click="togglePause" class="btn pull-left btn-outline-info">
+                    <router-link to="/settings" tag="button" @click="togglePause"
+                                 class="btn pull-left btn-outline-info">
                         <i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp; &nbsp; New text
                     </router-link>
                 </div>
@@ -22,7 +25,8 @@
                     </button>
                     <button @click="togglePause" class="btn"
                             v-bind:class="[isPaused ? 'btn-primary' : 'btn-outline-primary']">
-                        <i class="fa fa-play" v-bind:class="[isPaused ? 'fa-play' : 'fa-pause']" aria-hidden="true"></i>
+                        <i class="fa fa-play" v-bind:class="[isPaused ? 'fa-play' : 'fa-pause']"
+                           aria-hidden="true"></i>
                     </button>
                 </div>
                 <div class="col-3">
@@ -59,6 +63,7 @@
         mounted() {
             this.splitedText = this.text.split(" ").reduce(this.splitText, []);
             this.sliderLength = this.splitedText.length;
+            this.chunk = this.splitedText[0].join(" ");
             this.startReading();
         },
         computed: {
@@ -94,6 +99,7 @@
             },
             backToStart() {
                 this.sliderPosition = 0;
+                this.chunk = this.splitedText[0].join(" ");
             }
         }
     }
@@ -122,6 +128,9 @@
     }
 
     .controls-container {
-
+        margin-top: 20px;
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 0 20px rgba(43, 45, 56, .1);
     }
 </style>

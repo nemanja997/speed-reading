@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg navbar-light main-navbar">
         <div class="container">
             <router-link tag="a" to="/" class="navbar-brand font-weight-bold" href="#">Speed reader</router-link>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -14,7 +14,7 @@
                         <a class="nav-link" href="#">Custom text</a>
                     </router-link>
                     <router-link tag="li" to="/news" class="nav-item" active-class="active" exact>
-                        <a class="nav-link" href="#">Read news</a>
+                        <a class="nav-link" href="#">News</a>
                     </router-link>
 
                 </ul>
