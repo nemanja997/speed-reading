@@ -1,0 +1,13 @@
+
+.btn-shadow{
+  box-shadow: 0 14px 28px 0 rgba(13,31,61,.14);
+}
+
+.btn:not(:disabled):not(.disabled):active:focus{
+  outline:none;
+  box-shadow: none;
+}
+.btn:focus, .btn:active:focus{
+  outline:none;
+  box-shadow: none;
+}

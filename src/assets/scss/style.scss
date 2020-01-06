@@ -2,13 +2,17 @@
 //import variables
 @import "./variables";
 
-
-
 //import bootstrap
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
 //import navbar
 @import "./navbar";
+
+//import layout
+@import "./layout";
+
+//import buttons
+@import "./buttons";
 
 //import cards
 @import "./cards";
@@ -18,26 +22,4 @@
 
 .form-control:focus{
   box-shadow:none;
-}
-body, *{
-  font-family: 'Lato', sans-serif;
-}
-html, body {
-  background-color:#F5F7FA;
-  color:#32363d;
-}
-
-.btn-shadow{
-  box-shadow: 0 14px 28px 0 rgba(13,31,61,.14);
-}
-
-
-
-.btn:not(:disabled):not(.disabled):active:focus{
-  outline:none;
-  box-shadow: none;
-}
-.btn:focus, .btn:active:focus{
-  outline:none;
-  box-shadow: none;
 }
