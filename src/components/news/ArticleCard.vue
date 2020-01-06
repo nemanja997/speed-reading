@@ -1,5 +1,5 @@
 <template>
-    <div class="col-12 col-md-6 col-lg-4">
+    <div class="col-12 col-md-6 col-lg-4" @click="onCardClick" @mouseenter="isHovered = true" @mouseleave="isHovered = false">
         <div class="card article-card">
             <div class="card-body">
                 <div class="card-image mb-3" style="height:200px;">
@@ -7,8 +7,8 @@
                 </div>
                 <h2>{{articleTitle}}</h2>
                 {{articleText}}
-                <div class="mt-2 font-weight-bold">
-                    <a href="#">Speed read &nbsp; &nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                <div class="mt-2 font-weight-bold ">
+                    <a href="#" v-bind:class="{ active: isHovered }">Speed read &nbsp; &nbsp; <i class="fa fa-arrow-right article-link" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
@@ -25,6 +25,14 @@
         data(){
             return {
                 isHovered: false
+            }
+        },
+        methods: {
+            onCardClick() {
+                console.log('click');
+            },
+            onCardHover(){
+
             }
         }
     }

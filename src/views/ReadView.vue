@@ -4,37 +4,38 @@
             <div class="p-4 read-text-container">
                 <span class="read-text" v-text="chunk"></span>
             </div>
-        </div>
-        <div class="controls-container p-4">
-            <vue-slider
-                    v-model="sliderPosition"
-                    :min="0"
-                    :max="sliderLength"
-                    :interval="1"
-            />
-            <div class="row mt-2">
-                <div class="col-3">
-                    <router-link to="/settings" tag="button" @click="togglePause"
-                                 class="btn pull-left btn-outline-info">
-                        <i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp; &nbsp; New text
-                    </router-link>
-                </div>
-                <div class="col-6 text-center">
-                    <button @click="backToStart" class="btn btn-outline-primary mr-3">
-                        <i class="fa fa-fast-backward" aria-hidden="true"></i>
-                    </button>
-                    <button @click="togglePause" class="btn"
-                            v-bind:class="[isPaused ? 'btn-primary' : 'btn-outline-primary']">
-                        <i class="fa fa-play" v-bind:class="[isPaused ? 'fa-play' : 'fa-pause']"
-                           aria-hidden="true"></i>
-                    </button>
-                </div>
-                <div class="col-3">
+            <div class="controls-container p-4">
+                <vue-slider
+                        v-model="sliderPosition"
+                        :min="0"
+                        :max="sliderLength"
+                        :interval="1"
+                />
+                <div class="row mt-2">
+                    <div class="col-3">
+                        <router-link to="/settings" tag="button" @click="togglePause"
+                                     class="btn pull-left btn-outline-info">
+                            <i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp; &nbsp; New text
+                        </router-link>
+                    </div>
+                    <div class="col-6 text-center">
+                        <button @click="backToStart" class="btn btn-outline-primary mr-3">
+                            <i class="fa fa-fast-backward" aria-hidden="true"></i>
+                        </button>
+                        <button @click="togglePause" class="btn"
+                                v-bind:class="[isPaused ? 'btn-primary' : 'btn-outline-primary']">
+                            <i class="fa fa-play" v-bind:class="[isPaused ? 'fa-play' : 'fa-pause']"
+                               aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="col-3">
+
+                    </div>
 
                 </div>
-
             </div>
         </div>
+
     </div>
 </template>
 
@@ -125,12 +126,5 @@
     .read-text {
         color: black;
         font-size: 40px;
-    }
-
-    .controls-container {
-        margin-top: 20px;
-        border-radius: 8px;
-        background: #fff;
-        box-shadow: 0 0 20px rgba(43, 45, 56, .1);
     }
 </style>
