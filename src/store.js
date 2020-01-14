@@ -1,5 +1,6 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from 'vue';
+import Vuex from 'vuex';
+import axios from 'axios';
 
 Vue.use(Vuex)
 
@@ -19,7 +20,7 @@ export default new Vuex.Store({
             color: 'black',
             fontFamily: 'Arial',
         },
-        news:{}
+        news:[]
     },
     mutations: {
         addReadingText(state, text) {
@@ -27,9 +28,24 @@ export default new Vuex.Store({
         },
         addSettings(state, settings) {
             state.settings = settings;
+        },
+        addNews(state, news){
+            this.news = news;
         }
     },
-    actions: {},
+    actions: {
+        addNews(context){
+            return axios.get('https://newsapi.org/v2/top-headlines?country=de&category=business&apiKey=ab1649b6ce314100b84b0537ecbe9abe')
+                .then((response) => {
+                    console.log(response.data);
+                    context.commit('addNews', response.data);
+                })
+                .catch((response) => {
+                    console.log(response.data.error);
+                });
+
+        }
+    },
     getters: {
         textSet(state){
             return state.readingText !== '';

@@ -23,13 +23,13 @@ export default new Router({
                     name: 'settings',
                     component: SettingsView,
                     alias: '/',
-                    meta: { title: 'Settings' }
+                    meta: { title: 'Custom text' }
                 },
                 {
                     path: 'read',
                     name: 'read',
                     component: ReadView,
-                    meta: { title: 'Read' }
+                    meta: { title: 'Custom text - Reading' }
                 }
             ]
         },

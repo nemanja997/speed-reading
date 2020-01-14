@@ -1,20 +1,23 @@
 <template>
-    <div id="page-wrapper">
-        <main-navbar></main-navbar>
-        <div class="container-fluid">
+    <div id="page-wrapper" class="d-flex flex-column">
+        <the-main-navbar></the-main-navbar>
+        <div class="container-fluid content-container">
             <transition name="fade" mode="out-in">
                 <router-view></router-view>
             </transition>
         </div>
+        <the-footer></the-footer>
     </div>
 </template>
 
 <script>
-    import MainNavbar from '../components/TheMainNavbar';
+    import TheMainNavbar from '../components/partials/TheMainNavbar';
+    import TheFooter from '../components/partials/TheFooter';
     export default {
         name: "AppBaseView",
         components:{
-            MainNavbar
+            TheMainNavbar,
+            TheFooter
         },
         data() {
             return {

@@ -42,7 +42,7 @@
 
 <script>
     import {SweetModal} from 'sweet-modal-vue';
-    import ReadingSettingsForm from './settings/ReadingSettingsForm'
+    import ReadingSettingsForm from '../settings/ReadingSettingsForm'
 
     export default {
         name: "MainNavbar",
