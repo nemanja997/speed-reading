@@ -2,6 +2,8 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import axios from 'axios';
 
+import { getReadSettingsFromStore } from './helpers/localStorage';
+
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -13,12 +15,11 @@ export default new Vuex.Store({
             'in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' +
             'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui ' +
             'officia deserunt mollit anim id est laborum.',
-        settings: {
-            wordsPerMinute: 200,
+        settings: getReadSettingsFromStore() || {
             chunks: 1,
-            fontSize: 16,
-            color: 'black',
-            fontFamily: 'Arial',
+            fontSize: 40,
+            wordsPerMinute: 200,
+            fontFamily: 'Arial'
         },
         news:[]
     },

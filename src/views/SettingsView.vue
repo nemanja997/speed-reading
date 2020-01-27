@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import TextInputForm from '../components/settings/TextinputForm'
+  import TextInputForm from '../components/forms/TextinputForm'
   export default {
     name: 'home',
       components:{
