@@ -13,6 +13,8 @@
 <script>
     import TheMainNavbar from '../components/partials/TheMainNavbar';
     import TheFooter from '../components/partials/TheFooter';
+    import axios from 'axios';
+
     export default {
         name: "AppBaseView",
         components:{
@@ -23,6 +25,9 @@
             return {
                 darkMode: false
             }
+        },
+        mounted(){
+          axios.get('/.netlify/functions/news').then(response => console.log(response.data));
         },
         methods: {
             changeTheme() {

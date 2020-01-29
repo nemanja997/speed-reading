@@ -1,0 +1,10 @@
+[build]
+  functions = "lambda"
+  # This will be run the site build
+  command = "npm run build:serve"
+  # This is the directory is publishing to netlify's CDN
+  publish = "build:server"
+
+[dev]
+  # Local dev command. A.k.a npm start
+  command = "vue-cli-service serve"
