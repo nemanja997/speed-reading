@@ -27,7 +27,7 @@
             }
         },
         mounted(){
-          axios.get('/.netlify/functions/news').then(response => console.log(response.data));
+          axios.get('/.netlify/functions/articles').then(response => console.log(response.data));
         },
         methods: {
             changeTheme() {
