@@ -36,7 +36,7 @@ exports.handler = async (event, context) => {
             imageUrl: data.imageUrl
         };
         let response = {
-            msg: "Product successfully created",
+            msg: "Article successfully created",
             data: article
         }
 
@@ -46,7 +46,7 @@ exports.handler = async (event, context) => {
             body: JSON.stringify(response)
         }
     } catch (err) {
-        console.log('product-create', err);
+        console.log('articles-create', err);
         return {
             statusCode: 500,
             body: JSON.stringify({msg: err.message})

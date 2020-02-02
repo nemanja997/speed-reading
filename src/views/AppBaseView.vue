@@ -27,7 +27,7 @@
             }
         },
         mounted(){
-          axios.get('/.netlify/functions/articles').then(response => console.log(response.data));
+          this.$store.dispatch('addNews');
 
             axios.post('/.netlify/functions/articles-create',{
                 title:"Ovo je naslov novog...",

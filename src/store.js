@@ -21,7 +21,7 @@ export default new Vuex.Store({
             wordsPerMinute: 200,
             fontFamily: 'Arial'
         },
-        news:[]
+        articles:[]
     },
     mutations: {
         addReadingText(state, text) {
@@ -30,13 +30,13 @@ export default new Vuex.Store({
         addSettings(state, settings) {
             state.settings = settings;
         },
-        addNews(state, news){
-            this.news = news;
+        addNews(state, articles){
+            state.articles = articles;
         }
     },
     actions: {
         addNews(context){
-            return axios.get('https://newsapi.org/v2/top-headlines?country=de&category=business&apiKey=ab1649b6ce314100b84b0537ecbe9abe')
+            return axios.get('/.netlify/functions/articles')
                 .then((response) => {
                     console.log(response.data);
                     context.commit('addNews', response.data);

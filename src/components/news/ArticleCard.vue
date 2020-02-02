@@ -1,11 +1,11 @@
 <template>
-    <div class="col-12 col-md-6 col-lg-4" @click="onCardClick" @mouseenter="isHovered = true" @mouseleave="isHovered = false">
-        <div class="card article-card">
+    <div class="col-12 col-md-6 col-lg-4 mb-4" @click="onCardClick" @mouseenter="isHovered = true" @mouseleave="isHovered = false">
+        <div class="card article-card h-100">
             <div class="card-body">
-                <div class="card-image mb-3" style="height:200px;">
-                    <img class="img-fluid" src="../../../public/images/test.jpg" alt="">
+                <div class="card-image mb-3">
+                    <img class="img-fluid" :src="imageUrl" alt="">
                 </div>
-                <h2>{{articleTitle}}</h2>
+                <h4>{{articleTitle}}</h4>
                 {{shortText}}
                 <div class="mt-2 font-weight-bold text-right">
                     <a href="#" v-bind:class="{ active: isHovered }">Speed read  <span class="link-arrow">→</span></a>
@@ -20,7 +20,11 @@
         name: "ArticleCard",
         props:{
             articleTitle: String,
-            articleText:String
+            articleText:String,
+            imageUrl:{
+                type:String,
+                default: "./images/no-image.jpg"
+            }
         },
         data(){
             return {
@@ -30,9 +34,6 @@
         methods: {
             onCardClick() {
                 console.log('click');
-            },
-            onCardHover(){
-
             }
         },
         computed:{
@@ -47,7 +48,6 @@
     .article-card {
         border: none;
         box-shadow: 0px 6px 12px 0 rgba(13, 31, 61, 0.04);
-        margin-bottom: 30px;
         transition: all 0.3s ease;
     }
 

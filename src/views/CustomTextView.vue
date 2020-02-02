@@ -30,7 +30,6 @@
 
 <style scoped>
     .custom-text-container {
-        background-image: url('../../public/images/stars_background.png');
         background-size: cover;
         background-repeat: no-repeat;
     }
