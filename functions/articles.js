@@ -3,6 +3,7 @@ import articleSchema from './article.schema';
 
 let conn = null;
 
+// TODO: add password from url to .env file
 const uri = 'mongodb+srv://nemanja997:speedreading@cluster1-dbw2g.mongodb.net/netlify-database?retryWrites=true&w=majority';
 
 exports.handler = async (event, context) => {

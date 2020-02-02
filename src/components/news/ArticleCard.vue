@@ -16,6 +16,7 @@
 </template>
 
 <script>
+
     export default {
         name: "ArticleCard",
         props:{
@@ -45,6 +46,7 @@
 </script>
 
 <style scoped>
+    /*TODO:Fix layout of cards without equal title sizes*/
     .article-card {
         border: none;
         box-shadow: 0px 6px 12px 0 rgba(13, 31, 61, 0.04);
