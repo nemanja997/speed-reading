@@ -2,16 +2,20 @@ import mongoose from 'mongoose';
 import articleSchema from './article.schema';
 
 let conn = null;
+let Article = null;
 
 const uri = 'mongodb+srv://nemanja997:speedreading@cluster1-dbw2g.mongodb.net/netlify-database?retryWrites=true&w=majority';
 
 exports.handler = async (event, context) => {
 
-    //the following line is critical for performance reasons to allow re-use of database connections
-    // across calls to this Lambda function and avoid closing the database connection.
-    // The first call to this lambda function takes about 5 seconds to complete, while subsequent,
-    // close calls will only take a few hundred milliseconds.
     context.callbackWaitsForEmptyEventLoop = false;
+
+    if (event.httpMethod !== "POST") {
+        return {
+            statusCode: 405,
+            body: "Method Not Allowed"
+        };
+    }
 
     if (conn == null) {
         conn = await mongoose.createConnection(uri, {
@@ -19,16 +23,34 @@ exports.handler = async (event, context) => {
             bufferMaxEntries: 0,
             useNewUrlParser: true
         });
-        conn.model('Article', articleSchema);
+        Article = conn.model('Article', articleSchema);
     }
 
-    const M = conn.model('Article');
+    try {
+        const data = JSON.parse(event.body);
+        let article = {
+            _id: mongoose.Types.ObjectId(),
+            title: data.title,
+            body: data.body,
+            author: data.author,
+            imageUrl: data.imageUrl
+        };
+        let response = {
+            msg: "Product successfully created",
+            data: article
+        }
 
-    const doc = await M.find();
-
-    return {
-        statusCode: 200,
-        body: JSON.stringify(doc)
-    };
+        await Article.create(article);
+        return {
+            statusCode: 201,
+            body: JSON.stringify(response)
+        }
+    } catch (err) {
+        console.log('product-create', err);
+        return {
+            statusCode: 500,
+            body: JSON.stringify({msg: err.message})
+        }
+    }
 
 };

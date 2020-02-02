@@ -28,6 +28,13 @@
         },
         mounted(){
           axios.get('/.netlify/functions/articles').then(response => console.log(response.data));
+
+            axios.post('/.netlify/functions/articles-create',{
+                title:"Ovo je naslov novog...",
+                body: "Ovo je telo novog...",
+                author: "Nemanja kazic",
+                imageUrl: "https://techcrunch.com/wp-content/uploads/2020/01/pasted-image-0.png?w=430&h=230&crop=1"
+            }).then(response => console.log(response.data));
         },
         methods: {
             changeTheme() {
