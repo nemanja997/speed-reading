@@ -6,7 +6,7 @@
     "serve": "npm-run-all --parallel serve:app serve:server",
     "serve:app": "vue-cli-service serve",
     "serve:server": "netlify-lambda serve functions",
-    "build": "npm-run-all --parallel build:**",
+    "build": "npm-run-all --parallel build:app build:server",
     "build:app": "vue-cli-service build",
     "build:server": "netlify-lambda build functions",
     "test": "mocha-webpack --webpack-config webpack.config.js --require test/setup.js test/**/*.spec.js",
