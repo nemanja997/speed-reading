@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import articleSchema from './article.schema';
+import articleSchema from './models/article.schema';
 
 let conn = null;
 
